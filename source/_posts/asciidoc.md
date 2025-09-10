@@ -21,7 +21,7 @@ plugins:
 ### Headers (atx style)
 
 <!-- prettier-ignore -->
-```markdown
+```asciidoc
 = h1
 == h2
 === h3
