@@ -54,16 +54,16 @@ Header 2
 ### Unordered List {.row-span-2}
 
 <!-- prettier-ignore -->
-```markdown
+```asciidoc
 * Item 1
-* Item 2
-  * item 3a
-  * item 3b
+** item 2a
+** item 2b
+* item 3
 ```
 
 or
 
-```markdown
+```asciidoc
 - Item 1
 - Item 2
 ```
@@ -71,25 +71,27 @@ or
 or
 
 <!-- prettier-ignore -->
-```markdown
-_ Item 1
-+ Item 2
+```asciidoc
+[square]
+* Item 1
+* Item 2
 ```
 
 or
 
-```markdown
-- [ ] Checkbox off
-- [x] Checkbox on
+```asciidoc
+* [ ] Checkbox off
+* [x] Checkbox on
 ```
 
 ### Ordered List
 
-```markdown
-1. Item 1
-2. Item 2  
-   a. Item 3a  
-   b. Item 3b
+```asciidoc
+a. Item 1
+   .. Item 2a  
+   .. Item 2b
+      1. Test
+      . Test2
 ```
 
 ### Links
