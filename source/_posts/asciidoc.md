@@ -18,6 +18,8 @@ plugins:
 
 ## Markdown Quick Reference
 
+[Source](https://powerman.name/doc/asciidoc)
+
 ### Headers (atx style)
 
 <!-- prettier-ignore -->
@@ -43,22 +45,92 @@ Header 2
 
 ### Blockquotes
 
+
+<!-- prettier-ignore -->
 ```markdown
-> This is  
-> a blockquote
->
-> > Nested  
-> > Blockquote
+.Optional Title
+----
+*Listing* Block
+
+Use: code or file listings
+----
+```
+
+or
+
+<!-- prettier-ignore -->
+```markdown
+.Optional Title
+[source,perl]
+----
+# *Source* block
+# Use: highlight code listings
+# (require `source-highlight` or `pygmentize`)
+use DBI;
+my $dbh = DBI->connect('...',$u,$p)
+    or die "connect: $dbh->errstr";
+----
+```
+
+
+or
+
+<!-- prettier-ignore -->
+```markdown
+.Optional Title
+==========================
+*Example* Block
+
+Use: examples :)
+
+Default caption "Example:"
+can be changed using
+
+ [caption="Custom: "]
+
+before example block.
+==========================
+```
+
+or
+
+<!-- prettier-ignore -->
+```markdown
+.Optional Title
+[NOTE]
+===============================
+*NOTE* Block
+
+Use: multi-paragraph notes.
+===============================
+```
+
+or
+
+<!-- prettier-ignore -->
+```markdown
+////
+*Comment* block
+
+Use: hide comments
+////
 ```
 
 ### Unordered List {.row-span-2}
 
 <!-- prettier-ignore -->
 ```asciidoc
-* Item 1
-** item 2a
-** item 2b
-* item 3
+.Bulleted
+* bullet
+  - bullet
+  - bullet
+* bullet
+** bullet
+** bullet
+*** bullet
+*** bullet
+** bullet
+* bullet
 ```
 
 or
@@ -66,15 +138,6 @@ or
 ```asciidoc
 - Item 1
 - Item 2
-```
-
-or
-
-<!-- prettier-ignore -->
-```asciidoc
-[square]
-* Item 1
-* Item 2
 ```
 
 or
