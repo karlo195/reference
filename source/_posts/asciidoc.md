@@ -150,11 +150,99 @@ or
 ### Ordered List
 
 ```asciidoc
-a. Item 1
-   .. Item 2a  
-   .. Item 2b
-      1. Test
-      . Test2
+.Ordered
+. number
+  .. letter
+. number
+.. loweralpha
+.. loweralpha
+... lowerroman
+.... upperalpha
+..... upperroman
+.... upperalpha
+... lowerroman
+.. loweralpha
+. number
+```
+
+
+or
+
+
+```asciidoc
+.Ordered 2
+a. letter
+b. letter
+   .. letter2
+       .  number
+       .  number
+           1. number2
+           2. number2
+       .  number
+   .. letter2
+c. letter
+```
+
+
+or
+
+
+```asciidoc
+.Labeled
+Term 1::
+    Definition 1
+Term 2::
+    Definition 2
+    Term 2.1;;
+        Definition 2.1
+    Term 2.2;;
+        Definition 2.2
+Term 3::
+    Definition 3
+Term 4:: Definition 4
+Term 4.1::: Definition 4.1
+Term 4.2::: Definition 4.2
+Term 4.2.1:::: Definition 4.2.1
+Term 4.3::: Definition 4.3
+Term 5:: Definition 5
+```
+
+
+or
+
+
+```asciidoc
+[horizontal]
+.Labeled horizontal
+Term 1:: Definition 1
+Term 2:: Definition 2
+[horizontal]
+    Term 2.1;;
+        Definition 2.1
+    Term 2.2;;
+        Definition 2.2
+Term 3::
+    Definition 3
+Term 4:: Definition 4
+[horizontal]
+Term 4.1::: Definition 4.1
+Term 4.2::: Definition 4.2
+[horizontal]
+Term 4.2.1:::: Definition 4.2.1
+Term 4.2.2:::: Definition 4.2.2
+Term 4.3::: Definition 4.3
+Term 5:: Definition 5
+```
+
+or 
+
+
+```asciidoc
+[qanda]
+.Q&A
+Question 1::
+    Answer 1
+Question 2:: Answer 2
 ```
 
 ### Links
